@@ -5,17 +5,27 @@
   padding: 0;
 }
 
+/* ----------
+  background images
+---------- */
 body {
+  background-image: url('/images/babyFeet.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Roboto Mono", monospace;
-  position: relative;
+  height: 100vh;
 }
 
+/* ----------
+  baby timer card: desktop styling @ 954px x 1254px and up
+---------- */
 .main {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  z-index: 10;
-  backdrop-filter: blur(0.6rem);
+  max-width: 1000px;
+  backdrop-filter: blur(0.3rem);
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
@@ -23,6 +33,7 @@ body {
   );
   padding: 1rem;
   border-radius: 15px;
+ 
 }
 
 .main h2 {
@@ -41,46 +52,30 @@ body {
   font-size: 60px;
   margin-top: 40px;
   background-color: rgb(118, 40, 40);
+  border-radius: 15px;
 }
 
-.grid-container {
-  height: 100vh;
-  width: 100%;
-  margin: auto;
-  background-color: #ddd;
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "pic1 pic2"
-    "pic3 pic4";
+/* ----------
+  baby timer card: desktop styling
+---------- */
+
+@media (max-width: 954px) {
+  .main {
+    width: 100%;
+    margin: 5% 5%;
+  }
+
+  .main h2 {
+    font-size: 3.5rem;
+  } 
+  
+  .main #timer {
+    font-size: 3rem;
+  }
 }
 
-.pic1 {
-  grid-area: pic1;
-  background-image: url(./images/butt.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-
-.pic2 {
-  grid-area: pic2;
-  background-image: url(./images/couple.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-
-.pic3 {
-  grid-area: pic3;
-  background-image: url(./images/cradle.jpg);
-  background-position: center center;
-  background-size: cover;
-}
-
-.pic4 {
-  grid-area: pic4;
-  background-image: url(./images/babyFeet.jpg);
-  background-position: center center;
-  background-size: cover;
+@media (max-width: 518px) {
+  .main #timer {
+    font-size: 2rem;
+  }
 }
