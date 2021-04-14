@@ -33,13 +33,13 @@ body {
   );
   padding: 1rem;
   border-radius: 15px;
- 
 }
 
 .main h2 {
   font-size: 70px;
   text-align: center;
   color: #fff;
+  text-shadow: 1px 1px #000000;
 }
 
 .main h2 span {
@@ -53,6 +53,8 @@ body {
   margin-top: 40px;
   background-color: rgb(118, 40, 40);
   border-radius: 15px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #000000;
 }
 
 /* ----------
