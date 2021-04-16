@@ -26,3 +26,25 @@ let x = setInterval(function() {
     document.getElementById("demo").innerHTML = "The baby is here!!!";
   }
 }, 1000);
+
+//baby due date text
+const bannerText = document.getElementById('text');
+const text = "August 28th, 2021";
+
+//set banner scrolling text speed
+let index = 1;
+
+
+writeText();
+
+function writeText() {
+    bannerText.innerText = text.slice(0, index);
+
+    index++
+
+    if(index > text.length) {
+        index = 1;
+    }
+
+    setTimeout(writeText, 500)
+}
